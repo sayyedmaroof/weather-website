@@ -1,6 +1,3 @@
-console.log("This is a client side JavaScript file and this is successfully loaded in our page");
-
-
 // targetting the form 
 const weatherForm = document.querySelector("form");
 const weatherSearch = document.getElementById("weatherSearch");
