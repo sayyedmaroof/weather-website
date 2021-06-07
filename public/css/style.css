@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    margin: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4rem;
+    /* text-align: center; */
+    margin-bottom: 16px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 5px 15px 5px 0;
+}
+
+nav ul li a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #6d6565;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+h2 {
+    color: brown;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #646363;
+}
+
+.messages {
+    font-size: 20px;
+    text-decoration: wavy;
+}
+
+.portrait {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    padding: 10px 30px;
+}
+
+footer {
+    /* background-color: rgb(128, 133, 138); */
+    padding: 20px;
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin: 16px;
+    padding: 16px 0;
+}
