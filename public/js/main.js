@@ -10,7 +10,7 @@ const messageTwo = document.getElementById("messageTwo");
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const location = weatherSearch.value;
-    const url = `http://localhost:3000/weather?address=${location}`
+    const url = `/weather?address=${location}`
 
     messageOne.innerText = "Lodaing Data Please Wait"
     fetch(url).then(response => {
