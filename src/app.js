@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather App',
+        title: 'Weather',
         name: "Sayyed Maroof"
     });
 })
@@ -37,8 +37,8 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        message: "hello please tell me how can I help you",
-        title: 'Help Page',
+        message: "Weclome to the help page of this application",
+        title: 'Help',
         name: 'Sayyed Maroof'
     })
 })
@@ -48,7 +48,6 @@ app.get("/weather", (req, res) => {
     if (!req.query.address) {
         return res.send({ error: "please provide an address" })
     }
-
     geocode(req.query.address, (error, { latitude, longitude, location } = {}) => {
         if (error) {
             return res.send({ error })
@@ -58,7 +57,8 @@ app.get("/weather", (req, res) => {
                 return res.send({ error })
             }
             res.send({
-                forecast: forecastData,
+                forecast: forecastData.string,
+                forecastIcon: forecastData.iconUrl,
                 location,
                 address: req.query.address
             })

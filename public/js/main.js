@@ -6,6 +6,9 @@ const weatherSearch = document.getElementById("weatherSearch");
 const messageOne = document.getElementById("messageOne");
 const messageTwo = document.getElementById("messageTwo");
 
+// iconbox 
+const iconBox = document.querySelector('.iconBox');
+
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -21,6 +24,7 @@ weatherForm.addEventListener('submit', (e) => {
             else {
                 messageOne.innerText = data.location
                 messageTwo.innerText = data.forecast
+                iconBox.innerHTML = `<img src="${data.forecastIcon}" alt="">`
             }
         })
     })
